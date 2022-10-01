@@ -9,6 +9,7 @@ val mockkVersion = "1.13.2"
 plugins {
     application
     kotlin("jvm") version "1.7.20"
+    id("com.adarshr.test-logger") version "3.2.0" // better test logs
 }
 
 group = "io.ztlpay"

@@ -66,11 +66,11 @@ fun Application.configureRouting(
         }
         get("/currencies") {
             try {
-                CoindirectCountryRequest(client, mapper, call.max())
+                CoindirectCountryRequest(client, mapper)
                     .fetchCurrencies(call.sortDirection())
                     .let {
                         call.response.header("Content-Type", "application/json")
-                        call.respond(mapper.writeValueAsString(it))
+                        call.respond(mapper.writeValueAsString(it.take(call.max())))
                     }
             } catch (e: Exception) {
                 log.error("Failed to fetch currency data: ${e.message}", e)

@@ -21,6 +21,7 @@ class CoindirectCountryRequest(
         .build()
 
     companion object {
+        // TODO - url should be an environment variable.
         const val url: String = "https://api.coindirect.com/api/country"
         enum class SortBy { NAME, CURRENCY; }
         enum class SortDirection { ASC, DESC; }
