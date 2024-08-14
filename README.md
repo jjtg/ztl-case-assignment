@@ -4,19 +4,19 @@ This repo contains a proposed solution for the case assignment.
 ### Build
 The project can be built with: 
 ```bash
-gradle build
+gradlew build
 ```
 ___
 ### Test
 Test coverage should be fair, though I believe it can be improved by adding integration tests. Running tests can be achieved with:
 ```bash
-gradle clean test
+gradlew clean test
 ```
 ___
 ### Run
 The application runs by default on port `http://localhost:8080`. To run the application simply use the following command:
 ```bash
-gradle run
+gradlew run
 ```
 ___
 ### Endpoints
